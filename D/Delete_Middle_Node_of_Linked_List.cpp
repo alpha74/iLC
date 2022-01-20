@@ -1,5 +1,5 @@
 // Delete the middle node of linked list
-// https://leetcode.com/problems/middle-of-the-linked-list/
+https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
 // Aman Kumar
 
 ListNode* middleNode(ListNode* head) 
