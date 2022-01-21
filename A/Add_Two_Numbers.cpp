@@ -4,60 +4,67 @@
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) 
 {
-    ListNode *head = new ListNode(0) ;
-    ListNode *curr = head ;
-
     int carry = 0 ;
+    ListNode *head = new ListNode(0) ;
+    ListNode *temp = head ;
 
-    while(l1 != NULL && l2 != NULL )
+    while( l1 != NULL && l2 != NULL )
     {
-        int sum = (l1 -> val) + (l2 -> val) + carry ;
-
-        carry = sum / 10 ;
-        sum = sum % 10 ;
-
-        ListNode *newnode = new ListNode(sum) ;
-        curr -> next = newnode ;
-        curr = curr -> next ;
-
+        int sum = l1->val + l2->val + carry ;
         l1 = l1 -> next ;
         l2 = l2 -> next ;
-    }
 
-    // Check for larger number list
-    ListNode *left = NULL ;
-    if( l1 != NULL )
-        left = l1 ;
-    else
-        left = l2 ;
-
-    while( left != NULL )
-    {
-        int sum = (left -> val ) + carry ;
-
-        carry = sum / 10 ;
-        sum = sum % 10 ;
+        if( sum > 9 )
+        {
+            carry = 1 ;
+            sum = sum % 10 ;
+        }
+        else
+            carry = 0 ;
 
         ListNode *newnode = new ListNode(sum) ;
-        curr -> next = newnode ;
-        curr = curr -> next ;
 
-        left = left -> next ;
+        temp -> next = newnode ;
+        temp = temp -> next ;
     }
 
-    if( carry != 0 )
-    {
-        ListNode *newnode = new ListNode(carry);
-        curr -> next = newnode ;
-        curr = curr -> next ;
-        curr -> next = NULL ;
-    }
+    ListNode *t = NULL ;
+
+    if( l1 != NULL )
+        t = l1 ;
     else
-            curr -> next = NULL ;
+        t = l2 ;
 
-    curr = head ;
+    while( t != NULL )
+    {
+        int sum = t->val + carry ;
+        t = t -> next ;
+
+        if( sum > 9 )
+        {
+            carry = 1 ;
+            sum = sum % 10 ;
+        }
+        else
+            carry = 0 ;
+
+        ListNode *newnode = new ListNode( sum ) ;
+
+        temp -> next = newnode ;
+        temp = temp -> next ;
+    }
+
+    if( carry == 1 )
+    {
+        ListNode *newnode = new ListNode(1) ;
+        temp -> next = newnode ;
+        temp = temp -> next ;
+    }
+
+    temp = head ;
     head = head -> next ;
-    delete curr ;
+
+    delete temp ;
 
     return head ;
 }
