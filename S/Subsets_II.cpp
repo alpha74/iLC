@@ -8,10 +8,7 @@ public:
     {
         if( row.size() == len )
         {
-            vector<int> temp = row ;
-            
-            sort( temp.begin(), temp.end() ) ;
-            ret.push_back( temp ) ;
+            ret.push_back( row ) ;
             return ;
         }
         
@@ -27,6 +24,8 @@ public:
     {
         vector<int> row ;
         vector<vector<int>> ret ;
+        
+        sort( nums.begin(), nums.end() ) ;
         
         map<vector<int>,int> hash ;
         hash[ row ] = 1 ;
