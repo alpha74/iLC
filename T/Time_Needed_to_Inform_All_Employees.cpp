@@ -3,7 +3,7 @@
 // https://leetcode.com/problems/time-needed-to-inform-all-employees/
 // Aman Kumar
 
-// SOL-1 1.4sec 280MB
+// SOL-1 500ms 180MB
 
 class MultiNode {
     public:
