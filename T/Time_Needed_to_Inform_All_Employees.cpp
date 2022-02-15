@@ -38,7 +38,14 @@ public:
     {
         MultiNode *root = new MultiNode( headID ) ;
         
-        map<int,MultiNode*> hash ;
+        vector<MultiNode*> hash ;
+        
+        // Create empty list
+        for( int i = 0 ; i < n ; i++ )
+        {
+            hash.push_back( NULL ) ;
+        }
+        
         hash[ headID ] = root ;
         
         // Create new nodes
