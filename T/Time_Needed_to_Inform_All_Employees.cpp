@@ -1,6 +1,6 @@
 // Given array of managers and informtime, where ith manager is manager[i] and time taken by manager to inform sub-ordinates is informTime[i], 
 // Calculate time to inform all employess starting from head(denoted by -1)
-// 
+// https://leetcode.com/problems/time-needed-to-inform-all-employees/
 // Aman Kumar
 
 // SOL-1 1.4sec 280MB
