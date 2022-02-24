@@ -1,6 +1,6 @@
-// Combine two SQL table with given conditions
-// https://leetcode.com/problems/combine-two-tables/
-// Aman Kumar
+# Combine two SQL table with given conditions
+# https://leetcode.com/problems/combine-two-tables/
+# Aman Kumar
 
 SELECT 
 Person.firstName as firstName,
