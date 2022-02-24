@@ -1,6 +1,6 @@
-// SQL : Get names of customers who have not ordered anytime
-// https://leetcode.com/problems/customers-who-never-order/
-// Aman Kumar
+# SQL : Get names of customers who have not ordered anytime
+# https://leetcode.com/problems/customers-who-never-order/
+# Aman Kumar
 
 # Using subquery to get cutomer who have orders and then removing them from all customers list
 SELECT Customers.name as Customers
