@@ -1,6 +1,6 @@
-// SQL : Print duplicate emails
-// https://leetcode.com/problems/duplicate-emails/
-// Aman Kumar
+# SQL : Print duplicate emails
+# https://leetcode.com/problems/duplicate-emails/
+# Aman Kumar
 
 SELECT email 
 FROM Person
