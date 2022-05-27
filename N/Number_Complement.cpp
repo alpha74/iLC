@@ -1,5 +1,5 @@
 // Return 1s complement of a number
-// https://leetcode.com/problems/number-complement/submissions/
+// https://leetcode.com/problems/number-complement/
 // Aman Kumar
 
 int findComplement(int num) 
