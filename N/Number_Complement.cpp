@@ -5,6 +5,9 @@
 int findComplement(int num) 
 {
     int ret = 0 ;
+    
+    if( num == 0 )
+        return 1 ;
 
     for( int i = 0 ; num != 0 ; i++)
     {
