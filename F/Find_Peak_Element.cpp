@@ -1,5 +1,5 @@
 // Find Peak element in an array
-// https://leetcode.com/problems/find-unique-binary-string/
+// https://leetcode.com/problems/find-peak-element/
 // Aman Kumar
 
 int findPeakElement(vector<int>& nums) 
