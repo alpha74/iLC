@@ -13,19 +13,18 @@ bool isVowel( char c )
 
 bool halvesAreAlike(string s) 
 {
-    int vowela = 0 ;
-    int vowelb = 0 ;
+    int vowel = 0 ;
 
     int n = s.length() ;
 
     for( int i = 0 ; i < n ; i++ )
     {
         if( i < n/2 && isVowel( s[i] ))
-            vowela++ ;
+            vowel++ ;
 
         else if( i >= n/2 && isVowel( s[i] ))
-            vowelb++ ;
+            vowel-- ;
     }
 
-    return vowela == vowelb ;
+    return vowel == 0 ;
 }
