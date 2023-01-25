@@ -1,7 +1,9 @@
 // Return sum of all numbers represented as digits from root to leaf
-// 
+// https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/description/
 // Aman Kumar
 
+// Runtime 10 ms Beats 51.11%
+// Memory 22.8 MB Beats 6.68%
 void checkPathSum( TreeNode *root, int currSum, int &ret, int row )
 {
     if( root == NULL )
