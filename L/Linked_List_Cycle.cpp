@@ -2,6 +2,9 @@
 // https://leetcode.com/problems/linked-list-cycle/
 // Aman Kumar
 
+// Runtime 7 ms Beats 96.35%
+// Memory 8.1 MB Beats 48.10%
+
 bool hasCycle(ListNode *head) 
 {
     ListNode *slow = head, *fast = head ;
