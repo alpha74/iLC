@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/path-sum-ii/
 // Aman Kumar
 
+// Runtime 23 ms Beats 28.91%
+// Memory 38.9 MB Beats 11.38%
 void checkPathSum( TreeNode *root, int currSum, int &t, vector<vector<int>> &ret, vector<int> row )
 {
     if( root == NULL )
