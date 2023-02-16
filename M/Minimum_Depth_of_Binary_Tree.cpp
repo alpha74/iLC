@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/minimum-depth-of-binary-tree/
 // Aman Kumar
 
+// Runtime 232 ms Beats 99.63%
+// Memory 144.8 MB Beats 55.91%
 int getMinHeight(TreeNode *root, int h)
 {
     h++ ;
