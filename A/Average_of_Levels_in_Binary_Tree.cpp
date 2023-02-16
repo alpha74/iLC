@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/average-of-levels-in-binary-tree/
 // Aman Kumar
 
+// Runtime 16 ms Beats 70.38%
+// Memory 22.5 MB Beats 36.49%
 vector<double> averageOfLevels(TreeNode* root) 
 {
     vector<double> ret ;
