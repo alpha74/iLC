@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/remove-linked-list-elements/submissions/
 // Aman Kumar
 
+// Runtime 20 ms Beats 91.40%
+// Memory 15.3 MB Beats 21.24%
 ListNode* removeElements(ListNode* head, int val) 
 {
     if( head == NULL )
