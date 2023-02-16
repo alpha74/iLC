@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/symmetric-tree/
 // Aman Kumar
 
+// Runtime 4 ms Beats 72.70%
+// Memory 16.5 MB Beats 25.23%
 bool symm(TreeNode *root1, TreeNode *root2)
 {
     if( root1 == NULL && root2 == NULL )
