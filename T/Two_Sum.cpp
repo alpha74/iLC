@@ -2,7 +2,9 @@
 // https://leetcode.com/problems/two-sum/
 // Aman Kumar
 
-vvector<int> twoSum(vector<int>& nums, int target) 
+// Runtime 8 ms Beats 94.96%
+// Memory 11 MB Beats 28.61%
+vector<int> twoSum(vector<int>& nums, int target) 
 {
     vector<int> ret = {-1, -1} ;
 
