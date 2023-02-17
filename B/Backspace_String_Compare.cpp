@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/backspace-string-compare/
 // Aman Kumar
 
+// Runtime 0 ms Beats 100%
+// Memory 6.5 MB Beats 6.60%
 bool backspaceCompare(string s, string t) 
 {
     stack<char> stk1 ;
