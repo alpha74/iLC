@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/merge-sorted-array/
 // Aman Kumar
 
+// Runtime 0 ms Beats 100%
+// Memory 9 MB Beats 92.2%
 void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) 
 {
     int u = m+n-1 ;
