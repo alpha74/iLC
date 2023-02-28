@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/intersection-of-two-arrays-ii/
 // Aman Kumar
 
+// Runtime 3 ms Beats 93.48%
+// Memory 10.9 MB Beats 8.89%
 vector<int> intersect(vector<int>& nums1, vector<int>& nums2) 
 {
     unordered_map<int,int> hash1 ;
