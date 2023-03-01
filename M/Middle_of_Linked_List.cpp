@@ -2,32 +2,27 @@
 // https://leetcode.com/problems/middle-of-the-linked-list/
 // Aman Kumar
 
+// Runtime 0 ms Beats 100%
+// Memory 7 MB Beats 79.6%
 ListNode* middleNode(ListNode* head) 
 {
-    // if second fast is null, use slow for mid
-    // if first fast is null, use slow -> next 
-    // slow = head ;
-    // fast = head -> next ;
+    if( head == NULL || head -> next == NULL)
+        return head ;
 
-    ListNode *slow = head, *fast = head -> next ;
-    ListNode *ret = head ;
+    if( head -> next -> next == NULL)
+        return head -> next ;
 
-    while( fast != NULL && ret == head )
+    ListNode *slow = head ;
+    ListNode *fast = head -> next ;
+
+    while(fast != NULL)
     {
-        if( fast -> next == NULL )
-            ret = slow -> next ;
-        else
-        {
-            // First jump
-            fast = fast -> next ;
-            slow = slow -> next ;
+        slow = slow -> next ;
+        fast = fast -> next ;
 
-            // Second jump
-            if( fast -> next == NULL )
-                ret = slow ;
-
+        if( fast != NULL)
             fast = fast -> next ;
-        }
     }
-    return ret ;
+
+    return slow ;
 }
