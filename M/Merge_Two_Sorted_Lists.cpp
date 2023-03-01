@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/merge-two-sorted-lists/
 // Aman Kumar
 
+// Runtime 8 ms Beats 70.24%
+// Memory 14.8 MB Beats 49.8%
 ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) 
 {
     ListNode *newHead = new ListNode(-1) ;
