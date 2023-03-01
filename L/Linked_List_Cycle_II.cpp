@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/linked-list-cycle-ii/
 // Aman Kumar
 
+// Runtime 8 ms Beats 77.72%
+// Memory 7.5 MB Beats 84.80%
 ListNode *detectCycle(ListNode *head) 
 {
     if( head == NULL || head -> next == NULL )
