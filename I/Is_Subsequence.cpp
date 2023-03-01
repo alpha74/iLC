@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/is-subsequence/
 // Aman Kumar
 
+// Runtime 0 ms Beats 100%
+// Memory 6.4 MB Beats 29.46%
 bool isSubsequence(string s, string t) 
 {
     int i = 0 ;
