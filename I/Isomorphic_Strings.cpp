@@ -2,21 +2,26 @@
 // https://leetcode.com/problems/isomorphic-strings/
 // Aman Kumar
 
+// Runtime 0 ms Beats 100%
+// Memory 7.1 MB Beats 18.39%
 bool isIsomorphic(string s, string t) 
 {
-    unordered_map<char,char> hash1 ;
-    unordered_map<char,char> hash2 ;
+    vector<int> hash1(258,0) ;
+    vector<int> hash2(258,0) ;
 
     for( int i = 0 ; i < s.length() ; i++ )
     {
-        if( hash1.find( s[i] ) != hash1.end() && hash1[ s[i] ] != t[i] )
+        int sval = s[i] +1;
+        int tval = t[i] +1;
+
+        if( hash1[ sval ] != 0 && hash1[ sval ] != tval )
             return false ;
 
-        if( hash2.find( t[i] ) != hash2.end() &&  hash2[ t[i] ] != s[i] )
+        if( hash2[ tval ] != 0 && hash2[ tval ] != sval )
             return false ;
 
-        hash1[ s[i] ] = t[i] ;
-        hash2[ t[i] ] = s[i] ;
+        hash1[ sval ] = tval ;
+        hash2[ tval ] = sval ;
     }
     return true ;
 }
