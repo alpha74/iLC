@@ -2,6 +2,7 @@
 // https://leetcode.com/problems/valid-sudoku/
 // Aman Kumar
 
+// Iterative Check
 bool rowCheck( vector<vector<char>> board, int row )
 {
     vector<int> freq( 10, 0 ) ;
@@ -97,4 +98,45 @@ bool isValidSudoku(vector<vector<char>>& board)
     }
 
     return ret ;
+}
+
+
+
+// Using Hashmap
+int getBlock(int i, int j)
+{
+    return 3 * (i/3) + (j/3) ;
+}
+
+bool isValidSudoku(vector<vector<char>>& board) 
+{
+    int n = board.size() ;
+
+    vector<unordered_map<char,int>> rowHash(n) ;
+    vector<unordered_map<char,int>> colHash(n) ;
+    vector<unordered_map<char,int>> blockHash(n) ;
+
+    for( int i = 0 ; i < n ; i++ )
+    {
+        for( int j = 0 ; j < n ; j++ )
+        {
+            if( board[i][j] == '.')
+                continue ;
+
+            if( rowHash[ i ][ board[i][j] ] == 1 )
+                return false ;
+
+            if( colHash[j][ board[i][j] ] == 1 )
+                return false ;
+
+            if( blockHash[ getBlock(i, j) ][ board[i][j] ] == 1 )
+                return false ;
+
+            rowHash[ i ][ board[i][j] ] = 1 ;
+            colHash[j][ board[i][j] ] = 1 ;
+            blockHash[ getBlock(i, j) ][ board[i][j] ] = 1 ;
+        }
+    }
+
+    return true ;
 }
