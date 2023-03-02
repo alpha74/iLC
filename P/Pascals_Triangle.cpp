@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/pascals-triangle/
 // Aman Kumar
 
+// Runtime 0 ms Beats 100%
+// Memory 6.9 MB Beats 17.59%
 vector<vector<int>> generate(int num) 
 {
     vector<vector<int>> ret ;
