@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/longest-palindrome/
 // Aman Kumar
 
+// Runtime 0 ms Beats 100%
+// Memory 6.7 MB Beats 56.63%
 int longestPalindrome(string s) 
 {
     unordered_map<char,int> freq ;
@@ -18,6 +20,7 @@ int longestPalindrome(string s)
     {
         maxlen += ((iter -> second)/2)*2 ;
 
+        // If any freq is odd, we can put in middle of string
         if( iter -> second % 2 == 1 )
             isOdd = true ;
     }
