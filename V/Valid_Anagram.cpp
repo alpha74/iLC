@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/valid-anagram/
 // Aman Kumar
 
+// Runtime 5 ms Beats 86.14%
+// Memory 7.4 MB Beats 61.69%
 bool isAnagram(string s, string t) 
 {
     if( s.length() != t.length() )
