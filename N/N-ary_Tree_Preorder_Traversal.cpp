@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 // Aman Kumar
 
+// Runtime 19 ms Beats 88.88%
+// Memory 11.8 MB Beats 18.5%
 void Npreorder( Node *root, vector<int> &ret )
 {
     if( root == NULL )
