@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/binary-search/
 // Aman Kumar
 
+// Runtime 39 ms Beats 70.96%
+// Memory 27.7 MB Beats 18.52%
 int search(vector<int>& nums, int target) 
 {
     int l = 0, r = nums.size()-1 ;
