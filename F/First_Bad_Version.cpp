@@ -2,8 +2,10 @@
 // https://leetcode.com/problems/first-bad-version/
 // Aman Kumar
 
+// Runtime 0 ms Beats 100%
+// Memory 5.9 MB Beats 82.32%
 int firstBadVersion(int n) 
-    {
+{
     if( n == 1 )
         return 1 ;
 
