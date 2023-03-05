@@ -4,25 +4,29 @@
 
 // Runtime 183 ms Beats 86.76%
 // Memory 109.6 MB Beats 69.43%
-int countBinarySubstrings(string s) 
+double findMaxAverage(vector<int>& nums, int k) 
 {
-    int n = s.length() ;
-    int currCount = 1, prevCount = 0 ;
-    int ret = 0 ;
+    double maxAvg = 0.0, sum = 0.0 ;
+    int n = nums.size() ;
 
-    for( int i = 1 ; i < n ; i++ )
+    int i = 0 ;
+
+    while( i < k && i < n )
     {
-        if( s[i] != s[i-1] )
-        {
-            ret += min( currCount, prevCount ) ;
-            prevCount = currCount ;
-            currCount = 1 ;
-        }
-        else
-            currCount++ ;
+        sum += nums[i] ;
+        i++ ;
     }
 
-    ret += min( currCount, prevCount ) ;
+    maxAvg = sum / k ;
 
-    return ret ;
+    while( i < n )
+    {
+        sum -= nums[i-k] ;
+        sum += nums[i] ;
+
+        maxAvg = max( maxAvg, sum * 1.0 / k );
+        i++ ;
+    }
+
+    return maxAvg ;
 }
