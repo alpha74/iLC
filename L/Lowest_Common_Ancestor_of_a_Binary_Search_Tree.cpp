@@ -6,16 +6,14 @@
 // Memory 23.2 MB Beats 75.87%
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) 
 {
-    int current = root->val ;
+    int current = root -> val ;
 
     if( p -> val < current && q -> val < current) 
-    {
         return lowestCommonAncestor(root -> left, p, q);
-    }
+
     else if( p -> val > current && q -> val > current) 
-    {
         return lowestCommonAncestor(root -> right, p, q);
-    }
+
     else
         return root ;
 }
