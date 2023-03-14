@@ -12,7 +12,7 @@ struct sortStr
                 return a.size() > b.size();
             return a > b ;
         }
-    };
+};
 
 
 class Solution {
@@ -31,6 +31,7 @@ public:
 
         for( int i = 0 ; i < nums.size() ; i++ )
         {
+            // Fill heap till k elements
             if(curr < k)
             {
                 minheap.push( nums[i] ) ;
@@ -38,12 +39,10 @@ public:
             }
             else if( isSmaller(minheap.top(), nums[i] ) == 1)
             {
+                // Maintain the heap size as K
                 minheap.pop();
                 minheap.push( nums[i] ) ;
             }
-
-            if(curr > k)
-                minheap.pop() ;
         }
 
         // Return min string
