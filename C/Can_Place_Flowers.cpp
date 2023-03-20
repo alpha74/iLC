@@ -22,6 +22,7 @@ bool canPlaceFlowers(vector<int>& flowerbed, int n)
     // Now, size will be >1
     int i = 0 ;
 
+    // Check first flowerbed
     if( flowerbed[i] == 0 && flowerbed[i+1] == 0 )
     {
         n-- ;
@@ -31,6 +32,7 @@ bool canPlaceFlowers(vector<int>& flowerbed, int n)
     else
         i++ ;
 
+    // Place flowers
     for( ; i < size -1 && n > 0 ; )
     {
         if( flowerbed[i] == 0 && flowerbed[i-1] == 0 && flowerbed[i+1] == 0 )
@@ -43,6 +45,7 @@ bool canPlaceFlowers(vector<int>& flowerbed, int n)
             i++ ;
     }
 
+    // Check last flowerbed
     if( n > 0 && flowerbed[size-1] == 0 && flowerbed[size-2] == 0 )
     {
         flowerbed[size-1] = 1 ;
@@ -71,7 +74,5 @@ bool canPlaceFlowers(vector<int>& flowerbed, int n)
 1
 [0,0,0,0]
 1
-
-
 */
 }
