@@ -2,7 +2,7 @@
 # https://leetcode.com/problems/rearrange-products-table/description/
 # Aman Kumar
 
-# Runtime 1081 ms Beats 43.83%
+# Runtime 985 ms Beats 71.4%
 
 # Using UNION
 SELECT product_id, "store1" AS store, store1 AS price
