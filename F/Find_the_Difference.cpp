@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/find-the-difference/
 // Aman Kumar
 
+// Runtime 0 ms Beats 100%
+// Memory 6.9 MB Beats 17.70%
  char findTheDifference(string s, string t) 
 {
     int hash1[27] = {0} ;
