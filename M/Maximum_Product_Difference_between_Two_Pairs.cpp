@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/maximum-product-difference-between-two-pairs/
 // Aman Kumar
 
+// Runtime 11ms Beats99.06%of users with C++
+// Memory 20.66MB Beats64.73%of users with C++
 int maxProductDifference(vector<int>& nums) 
 {
     int index1 = 0 ;
