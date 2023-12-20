@@ -2,8 +2,8 @@
 // https://leetcode.com/problems/buy-two-chocolates/description/
 // Aman Kumar
 
-// Runtime 11ms Beats73.75%of users with C++
-// Memory 47.02MB Beats29.77%of users with C++
+// 8ms Beats 81.59% of users with C++
+// Memory 47.18MB Beats13.41%of users with C++
 int buyChoco(vector<int>& prices, int money) 
 {
     sort(prices.begin(), prices.end());
