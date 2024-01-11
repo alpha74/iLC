@@ -2,10 +2,14 @@
 // https://leetcode.com/problems/leaf-similar-trees/
 // Aman Kumar
 
+// Runtime 0ms Beats 100.00% of users with C++
+// Memory 13.20MB Beats81.10% of users with C++
 void inorder( TreeNode *root, vector<int> &ret )
 {
     if( root == NULL )
         return ;
+
+    // Store only leaf nodes
     if( root -> left == NULL && root -> right == NULL )
     {
         ret.push_back( root -> val ) ;
