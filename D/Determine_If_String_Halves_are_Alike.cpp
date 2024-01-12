@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/determine-if-string-halves-are-alike/
 // Aman Kumar
 
+// Runtime 0ms Beats100.00%of users with C++
+// Memory 7.05MB Beats46.92%of users with C++
 bool isVowel( char c )
 {
     if( c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
