@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/set-mismatch/submissions/
 // Aman Kumar
 
+// Runtime 13ms Beats98.21%of users with C++
+// Memory 23.86MB Beats35.68%of users with C++
 vector<int> findErrorNums(vector<int>& nums) 
 {
     vector<int> ret ;
