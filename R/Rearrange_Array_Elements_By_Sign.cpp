@@ -2,36 +2,29 @@
 // https://leetcode.com/problems/rearrange-array-elements-by-sign/description/
 // Aman Kumar
 
-// Runtime 239 ms Beats 85.19%
-// Memory 140.7 MB Beats 18.71%
+// Runtime 152ms Beats37.46%of users with C++
+// Memory 137.05MB Beats34.99%of users with C++
 vector<int> rearrangeArray(vector<int>& nums) 
 {
-    vector<int> ret ;
+    int n = nums.size();
+    vector<int> pos;
+    vector<int> neg;
 
-    vector<int> pos ;
-    vector<int> neg ;
-
-    for( int i = 0 ; i < nums.size() ; i++ )
+    for(int i = 0 ; i < n; i++)
     {
-        if( nums[i] >= 0 )
-            pos.push_back( nums[i] ) ;
+        if(nums[i] >= 0)
+            pos.push_back(nums[i]);
         else
-            neg.push_back( nums[i] ) ;
+            neg.push_back(nums[i]);
     }
 
-    int i = 0, j = 0 ;
+    int p = 0, q = 0;
 
-    while( i < pos.size() && j < neg.size() )
+    for(int i = 0 ; i < n ; )  
     {
-        ret.push_back( pos[i++] ) ;
-        ret.push_back( neg[j++] ) ;
+        nums[i++] = pos[p++];
+        nums[i++] = neg[q++];
     }
 
-    while( i < pos.size() )
-        ret.push_back( pos[i++] ) ;
-
-    while( j < neg.size() )
-        ret.push_back( neg[j++] ) ;
-
-    return ret ;    
+    return nums;
 }
