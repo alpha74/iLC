@@ -1,26 +1,30 @@
-// Sum of left leaves
+// Return sum of left leaves in a binary tree
 // https://leetcode.com/problems/sum-of-left-leaves/
 // Aman Kumar
 
-void leftSum( TreeNode *root, int &sum)
+// Runtime 0ms Beats 100.00% of users with C++
+// Memory 14.80MB Beats 48.75% of users with C++
+void inorder(TreeNode *root, int &sum)
 {
-    if( root == NULL )
-        return ;
+    if(root == NULL)
+        return;
+    
+    // If leaf node, return
+    if(root -> left == NULL && root -> right == NULL)
+        return;
+    
+    TreeNode *leftChild = root -> left;
+    
+    if(leftChild != NULL && (leftChild -> left == NULL && leftChild -> right == NULL))
+        sum += (leftChild -> val);
 
-    leftSum( root -> left, sum ) ;
-    leftSum( root -> right, sum ) ;
-
-    if( root -> left != NULL && root -> left -> left == NULL && root -> left -> right == NULL )
-        sum += ( root -> left -> val ) ;
+    inorder(leftChild, sum);
+    inorder(root -> right, sum);
 }
 
 int sumOfLeftLeaves(TreeNode* root) 
 {
-    if( root == NULL )
-        return 0 ;
-
-    int sum = 0 ;
-    leftSum( root, sum ) ;
-
-    return sum ;
+    int ret = 0 ;
+    inorder(root, ret);
+    return ret;    
 }
