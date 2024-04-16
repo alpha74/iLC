@@ -2,8 +2,8 @@
 // https://leetcode.com/problems/add-one-row-to-tree/description/
 // Aman Kumar
 
-// Runtime 11 ms Beats 99.58%
-// Memory 25.2 MB Beats 21.64%
+// Runtime 4ms Beats98.32%of users with C++
+// Memory 24.48MB Beats33.03%of users with C++
 TreeNode* addOneRow(TreeNode* root, int val, int depth) 
 {
     if(depth == 1)
