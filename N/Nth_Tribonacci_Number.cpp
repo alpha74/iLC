@@ -4,23 +4,27 @@
 
 // Runtime 0 ms Beats 100%
 // Memory 6 MB Beats 68.28%
-int getVal(int n, vector<int> &h)
+int find_num(int n, vector<int> &hash)
 {
-    if(h[n] != -1)
-        return h[n] ;
+    if(n <= 0)
+        return 0;
 
-    int val = getVal(n-1, h) + getVal(n-2, h) + getVal(n-3, h) ;
-    h[n] = val ;
-    return val ;
+    if(hash[n] != 0)
+        return hash[n];
+
+    int val = find_num(n-3, hash) + find_num(n-2, hash) + find_num(n-1, hash);
+    hash[n] = val;
+
+    //cout << "\n hash:" << n << " : " << hash[n];
+    return val;
 }
 
 int tribonacci(int n) 
 {
-    vector<int> hash(38,-1) ;
+    vector<int> hash(38, 0);
+    hash[0] = 0;
+    hash[1] = 1;
+    hash[2] = 1;
 
-    hash[0] = 0 ;
-    hash[1] = 1 ;
-    hash[2] = 1 ;
-
-    return getVal(n, hash) ;    
+    return find_num(n, hash);    
 }
