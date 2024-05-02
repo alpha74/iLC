@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/reverse-prefix-of-word/
 // Aman Kumar
 
+// Runtime 0ms Beats100.00%of users with C++
+// Memory 6.18MB Beats100.00%of users with C++
 string reversePrefix(string word, char ch) 
 {
     int index = -1 ;
