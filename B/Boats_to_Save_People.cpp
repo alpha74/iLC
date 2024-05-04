@@ -2,8 +2,8 @@
 // https://leetcode.com/problems/boats-to-save-people/description/
 // Aman Kumar
 
-// Runtime 80 ms Beats 88.31%
-// Memory 41.9 MB Beats 93.2%
+// Runtime 57ms Beats60.02%of users with C++
+// Memory 45.49MB Beats46.86%of users with C++
 int numRescueBoats(vector<int>& people, int limit) 
 {
     int ret = 0, left = 0, right = people.size()-1 ;
@@ -13,18 +13,15 @@ int numRescueBoats(vector<int>& people, int limit)
     while(left <= right)
     {
         int sum = people[left] + people[right] ;
+        ret++;
 
         if(sum <= limit)
         {
             left++ ;
             right-- ;
-            ret++ ;
         }
         else
-        {
             right-- ;
-            ret++ ;
-        }
     }
 
     return ret ;    
