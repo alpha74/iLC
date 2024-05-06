@@ -2,8 +2,8 @@
 // https://leetcode.com/problems/remove-nodes-from-linked-list/description/
 // Aman Kumar
 
-// Runtime 508 ms Beats 85.56%
-// Memory 174 MB Beats 28.11%
+// Runtime 256ms Beats83.95%of users with C++
+// Memory 164.54MB Beats57.95%of users with C++
 ListNode* removeNodes(ListNode* head) 
 {
     vector<int> rightMax ;
