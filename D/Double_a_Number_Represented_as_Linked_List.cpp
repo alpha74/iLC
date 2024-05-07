@@ -2,8 +2,8 @@
 // https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/description
 // Aman Kumar
 
-// Runtime 151ms Beats97.22%of users with C++
-// Memory 121.05MB Beats50.70%of users with C++
+// Runtime 142ms Beats99.51%of users with C++
+// Memory 120.94MB Beats59.81%of users with C++
 int doubling(ListNode *head)
 {
     if(head == NULL) return 0;
