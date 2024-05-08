@@ -2,39 +2,38 @@
 // https://leetcode.com/problems/relative-ranks/
 // Aman Kumar
 
-// Runtime: 17 ms, faster than 82.99% of C++ online submissions for Relative Ranks.
-// Memory Usage: 11.2 MB, less than 26.70% of C++ online submissions for Relative Ranks
+// Runtime 6ms Beats81.94%of users with C++
+// Memory 17.43MB Beats5.21%of users with C++
 vector<string> findRelativeRanks(vector<int>& score) 
 {
-    map<int,int> valIndex ;
-
-    for( int i = 0 ; i < score.size() ; i++ )
+    unordered_map<int,int> valIndex ;
+    int n = score.size();
+    
+    for(int i = 0 ; i < n ; i++ )
     {
-        valIndex[ score[i] ] = i ;
+        valIndex[score[i]] = i ;
     }
-
-    sort( score.rbegin(), score.rend() ); 
-
-    vector<string> ret( score.size() ) ;
-
+    
+    sort(score.rbegin(), score.rend()); 
+    
+    vector<string> ret(n) ;
+    
     int i = 0 ;
-    for( auto it = valIndex.begin() ; it != valIndex.end() ; it++, i++ )
+    for(auto it = valIndex.begin() ; it != valIndex.end() ; it++, i++ )
     {
         string pos = "" ;
-
+        
         int index = valIndex[ score[i] ] ;
-
+        
         if( i == 0 )
-            pos = "Gold Medal" ;
+            ret[index] = "Gold Medal" ;
         else if( i == 1 )
-            pos = "Silver Medal" ;
+            ret[index] = "Silver Medal" ;
         else if( i == 2 )
-            pos = "Bronze Medal" ;
+            ret[index] = "Bronze Medal" ;
         else
-            pos = to_string(i+1) ;
-
-        ret[index] = pos ;
+            ret[index] = to_string(i+1) ;
     }
-
+    
     return ret ;
 }
