@@ -2,8 +2,8 @@
 // https://leetcode.com/problems/largest-local-values-in-a-matrix/
 // Aman Kumar
 
-// Runtime: 7 ms, faster than 99.93% of C++ online submissions for Largest Local Values in a Matrix.
-// Memory Usage: 12.1 MB, less than 11.15% of C++ online submissions for Largest Local Values in a Matrix
+// Runtime 3ms Beats99.54%of users with C++
+// Memory 14.45MB Beats15.10%of users with C++
 int getMax( vector<vector<int>> &grid, int p, int q)
 {
     int ret = -1 ;
