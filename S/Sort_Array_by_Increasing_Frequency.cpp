@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/sort-array-by-increasing-frequency/
 // Aman Kumar
 
+// Runtime 0ms Beats 100.00%
+// Memory 15.08MB Beats 25.59%
 static bool sortFreq( pair<int,int> a, pair<int,int> b )
 {
     if( a.second > b.second )
