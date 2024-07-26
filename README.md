@@ -2,7 +2,7 @@
 
 # My LeetCode Submissions
 
-[Badges](https://github.com/alpha74/iLC/blob/main/badges.md)
+[LeetCode Badges](https://github.com/alpha74/iLC/blob/main/badges.md)
 
 - Maintained from Oct 2021 onwards.
 - Repo names are the first letters of problem name string.
