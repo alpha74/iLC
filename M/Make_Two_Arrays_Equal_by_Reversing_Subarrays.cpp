@@ -2,10 +2,12 @@
 // https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/
 // Aman Kumar
 
+// Runtime 4ms Beats 91.21%
+// Memory 17.43MB Beats 86.13% 
 bool canBeEqual(vector<int>& target, vector<int>& arr) 
 {
-    sort( target.begin(), target.end() ) ;
-    sort( arr.begin(), arr.end() ) ;
+    sort(target.begin(), target.end()) ;
+    sort(arr.begin(), arr.end()) ;
 
     bool ret = true ;
 
