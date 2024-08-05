@@ -6,7 +6,6 @@
 // Memory 10.49MB Beats 28.90%
 ListNode* reverseList(ListNode *head)
 {
-    cout << "\n head: " << head -> val;
     if(head == NULL || head -> next == NULL) return head;
 
     ListNode *first = NULL;
@@ -33,7 +32,7 @@ ListNode* reverseBetween(ListNode* head, int left, int right)
     ListNode *pStartPrev = NULL;
     ListNode *pEndNext = head;
 
-    // New head will be returned
+    // New head will be returned if left is 1
     if(left == 1)
     {
         pStart = head;
@@ -45,11 +44,13 @@ ListNode* reverseBetween(ListNode* head, int left, int right)
         while(right--)
             pEnd = pEnd -> next;
 
+        // Detach the new LL
         pEndNext = pEnd -> next;
         pEnd -> next = NULL;
         
         reverseList(pStart);
 
+        // pStart is now the end of reversed LL
         pStart -> next = pEndNext;
         return pEnd;
     }
@@ -57,6 +58,7 @@ ListNode* reverseBetween(ListNode* head, int left, int right)
     left -=2 ;
     pStartPrev = head;
 
+    // Iterate and detach new LL
     while(left--)
         pStartPrev = pStartPrev -> next;
 
@@ -65,6 +67,7 @@ ListNode* reverseBetween(ListNode* head, int left, int right)
     right--;
     pEnd = head;
     
+    // Find end of detached LL
     while(right--)
         pEnd = pEnd -> next;
 
