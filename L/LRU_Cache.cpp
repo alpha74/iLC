@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/lru-cache/
 // Aman Kumar
 
+// Runtime 302ms Beats 97.67%
+// Memory 169.65MB Beats 80.55%
 class DLL
 {
     public:
@@ -103,6 +105,8 @@ public:
             // Get node which is to be removed, prev to tail
             DLL *remNode = tail -> prev ;
             
+            //cout << "\n remNode: " << remNode -> key ;
+            
             int remKey = remNode -> key ;
             hash.erase( remKey ) ;
             
@@ -110,8 +114,6 @@ public:
             DLL *prevNode = remNode -> prev ;
             prevNode -> next = tail ;
             tail -> prev = prevNode ;
-            
-            //delete remNode ;
         }
         
         // If key is not already present
@@ -122,8 +124,11 @@ public:
             hash[ key ] = newnode ;
             setNodeAhead( newnode, head, tail ) ;
         }
+        
+        // stout
+        DLL* temp = head ;
     }
-  
+
 /*
 ["LRUCache","put"]
 [[2],[1,1]]
@@ -131,5 +136,4 @@ public:
 ["LRUCache","get","put","get","put","put","get","get"]
 [[2],[2],[2,6],[1],[1,5],[1,2],[1],[2]]
 */
-
 };
