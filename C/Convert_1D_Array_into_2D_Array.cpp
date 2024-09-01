@@ -2,34 +2,32 @@
 // https://leetcode.com/problems/convert-1d-array-into-2d-array/
 // Aman Kumar
 
-// Runtime: 164 ms, faster than 79.69% of C++ online submissions for Convert 1D Array Into 2D Array.
-// Memory Usage: 88.8 MB, less than 54.02% of C++ online submissions for Convert 1D Array Into 2D Array.
-vector<vector<int>> construct2DArray(vector<int>& original, int p, int q) 
+// Runtime 71ms Beats 90.63%
+// Memory 87.96MB Beats 83.87%
+vector<vector<int>> construct2DArray(vector<int>& original, int m, int n) 
 {
-    int n = original.size() ;
+    int size = original.size() ;
 
-    vector<vector<int>> ret ;
-
-    if( n != p * q )
-        return ret ;
-
-    int curr = 0 ;
-
-    vector<int> row ;
-
-    for( int i = 0 ; i < n ; i++ )
+    if(m * n != size)
     {
-        if( curr > 0 && curr % q == 0 )
-        {
-            ret.push_back( row ) ;
-            row.clear() ;   
-        }
-        row.push_back( original[i] ) ;
-        curr++ ;
+        vector<vector<int>> emp ;
+        return emp ;
     }
 
-    if( row.size() > 0 )
-        ret.push_back( row ) ;
+    vector<vector<int>> ret(m, vector<int> (n,0));
+    int p = 0, q = 0 ;
 
+    for(int i = 0 ; i < size ; i++)
+    {
+        if(i > 0 && q % n == 0)
+        {
+            p++ ;
+            q = 0 ;
+        }
+        
+        ret[p][q] = original[i] ;
+        q++ ;
+    }
+    
     return ret ;
 }
