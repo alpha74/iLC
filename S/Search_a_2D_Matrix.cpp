@@ -4,6 +4,34 @@
 
 // Runtime: 0 ms, faster than 100.00% of C++ online submissions for Search a 2D Matrix.
 // Memory Usage: 9.6 MB, less than 51.60% of C++ online submissions for Search a 2D Matrix.
+
+// O(log(m.n))
+bool searchMatrix(vector<vector<int>>& matrix, int target) 
+{
+    int n = matrix.size();
+    int m = matrix[0].size();
+
+    int tl = 0, br = (m*n)-1;
+
+    while(tl <= br)
+    {
+        int mid = tl + (br-tl)/2;
+        int curr = matrix[mid/m][mid % m];
+
+        if(curr == target)
+            return true;
+        
+        else if(target < curr)
+            br = mid -1;
+        
+        else
+            tl = mid +1;
+    } 
+
+    return false;   
+}
+
+// O(nlogm)
 bool binSearch( vector<vector<int>> &mat, int rowIndex, int &t)
 {
     bool ret = false ;
