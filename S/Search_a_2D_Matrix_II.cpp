@@ -8,27 +8,20 @@ bool searchMatrix(vector<vector<int>>& matrix, int target)
 {
     int n = matrix.size() ;
     int m = matrix[0].size() ;
-
+    
     int i = 0, j = m-1 ;
-
-    bool ret = false ;
-
-    while( i < n && j >= 0 && !ret )
+    
+    while(i < n && j >= 0)
     {
         int curr = matrix[i][j] ;
-
-        if( target == curr )
-            ret = true ;
-        else if( curr > target )
+        
+        if(target == curr)
+            return true;
+        else if(curr > target)
             j-- ;
         else
             i++ ;
     }
-
-    return ret ;
-/*
-[[-1,3]]
-3
-
-*/
+    
+    return false;
 }
