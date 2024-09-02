@@ -2,8 +2,8 @@
 // https://leetcode.com/problems/search-a-2d-matrix-ii/
 // Aman Kumar
 
-// Runtime: 87 ms, faster than 96.47% of C++ online submissions for Search a 2D Matrix II.
-// Memory Usage: 14.7 MB, less than 98.72% of C++ online submissions for Search a 2D Matrix II.
+// Runtime 47ms Beats 52.68%
+// Memory 17.67MB Beats 40.62%
 bool searchMatrix(vector<vector<int>>& matrix, int target) 
 {
     int n = matrix.size() ;
