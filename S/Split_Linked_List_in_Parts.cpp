@@ -2,6 +2,8 @@
 // https://leetcode.com/problems/split-linked-list-in-parts/
 // Aman Kumar
 
+// Runtime 4ms Beats 73.95%
+// Memory 13.97MB Beats12.83%
 vector<ListNode*> splitListToParts(ListNode* head, int k) 
 {
     int len = 0 ;
