@@ -2,8 +2,8 @@
 // https://leetcode.com/problems/minimum-size-subarray-sum/description/
 // Aman Kumar
 
-// Runtime 32 ms Beats 92.91%
-// Memory 28.2 MB Beats 59.93%
+// Runtime 0ms Beats 100.00%
+// Memory 32.17MB Beats5.38%
 int minSubArrayLen(int target, vector<int>& nums) 
 {
     int start = 0, end = 0 ;
