@@ -5,12 +5,13 @@
 // Runtime 32 ms Beats 92.91%
 // Memory 28.2 MB Beats 59.93%
 int minSubArrayLen(int target, vector<int>& nums) 
- {
+{
     int start = 0, end = 0 ;
     int minLen = INT_MAX ;
+    int n = nums.size();
     int currSum = 0, minSum = INT_MAX ;
 
-    while(end < nums.size())
+    while(end < n)
     {
         // Increase window
         if(currSum < target)
@@ -38,7 +39,7 @@ int minSubArrayLen(int target, vector<int>& nums)
     if(currSum >= target)
         minLen = min(minLen, end-start) ;
 
-
+    // Decrease window size
     while(currSum >= target && start < end)
     {
         currSum -= nums[ start ] ;
@@ -48,7 +49,7 @@ int minSubArrayLen(int target, vector<int>& nums)
             minLen = min(minLen, end-start) ;
     }
 
-    if(minLen == INT_MAX )
+    if(minLen == INT_MAX)
         return 0 ;
     return minLen ;
 /*
